@@ -22,9 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+rvv34x5-19+^dahlz@7225=gkvxir8)kb@(-v#5=w8mk=p1-e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://alibifactorybot.herokuapp.com', '127.0.0.1']
 
 # Application definition
 

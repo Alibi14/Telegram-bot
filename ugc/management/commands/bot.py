@@ -59,7 +59,7 @@ def do_count(update: Update, context: CallbackContext):
         }
     )
 
-    count = Message.objects.all()
+    count = Message.objects.filter(profile=p).count()
 
     update.message.reply_text(
         text=f'У вас {count} сообщений',
