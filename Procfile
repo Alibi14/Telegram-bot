@@ -1,1 +1,1 @@
-web: gunicorn djangotelebot.wsgi --log-file -
+web: gunicorn djangotelebots.wsgi --log-file -
