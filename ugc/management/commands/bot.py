@@ -28,7 +28,7 @@ def log_errors(f):
 def do_echo(update: Update, context: CallbackContext):
     chat_id = update.message.chat_id
     username = update.message.from_user.username
-    text = 'Ваше сообщение: ' + update.message.text
+    text = update.message.text
 
     p, _ = Profile.objects.get_or_create(  # булевый флаг профиль создан только что или нет
         external_id=chat_id,
@@ -42,7 +42,7 @@ def do_echo(update: Update, context: CallbackContext):
     )
     m.save()
 
-    reply_text = f'Your_ID = {chat_id}\n Message_ID = {m.pk}\n {m.text}'
+    reply_text = f'{username} Я получил от тебя сообщение: \n {m.text}'
     update.message.reply_text(
         text=reply_text,
     )
